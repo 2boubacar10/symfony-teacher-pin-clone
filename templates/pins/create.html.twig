@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Création de pin{% endblock %}
+
+{% block body %}
+
+<h1>Création de pin</h1>
+
+
+<form action="" method="post">
+    <div>
+        <label for="title">Title</label><br>
+        <input name="title" type="text" id="title">
+    </div>
+
+    <div>
+        <label for="description">Description</label><br>
+        <input name="description" type="text" id="description">
+    </div>
+
+    <div>
+        <button type="submit">Enrgistrer</button>
+    </div>
+</form>
+
+{% endblock %}
