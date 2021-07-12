@@ -1,0 +1,59 @@
+NOTES SYMFONY
+
+## l'ensemble des composants:
+https://symfony.com/components
+
+##creation d'un nouveau projet
+symfony new NOM_DU_PROJET
+
+
+##demarrer le serveur
+symfony serve || symfony server:start (avec l'option -d pour executer en mode daemon)
+
+##ouvrir au niveau du navigateur
+symfony open:local
+
+##lister l'ensemble des serveurs en cours
+symfony server:list
+
+
+##console symfony
+php bin/console
+ou
+symfony console
+
+
+##installation d'un package symfony
+composer req maker --dev
+
+##utiliser symfony en https
+symfony server:ca:install
+
+
+##creer un controler
+symfony console make:controller
+//il faut d'abord avoir doctrine/annotations
+composer req doctrine/annotations
+
+
+##creer une base de données depuis la console symfony
+symfony console doctrine:database:create
+
+
+##lister tous les parametres du container de symfony
+symfony console debug:container --parameters
+
+
+
+/*
+*Les paramètres de container sont  à definir dans une variable "parameters:" dans le fichier config/services.yaml
+*/
+
+##creer une migration pour la création d'une table dans la base de données
+symfony console make:migration
+
+/*
+*Pour mettre un nom de table différent de l'entite; il faut definir l'annotation
+*@ORM\Table(name="NOM_TABLE")
+*/
+
